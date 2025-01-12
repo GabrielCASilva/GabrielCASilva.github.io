@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <aside>
+      {{ partial "sidebar.html" . }}
+    </aside>
+    <main>
+      {{ block "main" . }} {{ end }}
+    </main>
+    <aside>
+      <h1>barra da esquerda</h1>
+    </aside>
+  </body>
+</html>
