@@ -1,10 +1,10 @@
 baseURL = 'https://gabrielcasilva.github.io'
 languageCode = 'pt-br'
-title = 'gcarvalho'
+title = 'gabrielcasilva'
+paginate = 6
 
 [params]
   description = 'blog pessoal sobre estudo de computação de tecnologias'
-  pagination = 6
 
 [taxiomies]
   category = 'categories'
