@@ -3,7 +3,13 @@
 <meta name="description" content={{or .Params.description .Site.Params.description}}>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ .Title }}</title>
-<link href="/styles/style.css" rel="stylesheet">
-<link href="/styles/sidebar.css" rel="stylesheet">
-<link href="/styles/cards.css" rel="stylesheet">
 
+{{ $cssResources := slice }}
+{{ $dir := readDir "assets/css" }}
+{{ range $dir }}
+  {{ $path := print "css/" .Name }}
+  {{ $resource := resources.Get $path }}
+  {{ $cssResources = $cssResources | append $resource }}
+{{ end }}
+{{ $cssBundle := $cssResources | resources.Concat "css/bundle.css" | fingerprint | minify }}
+<link rel="stylesheet" href="{{ $cssBundle.RelPermalink }}">

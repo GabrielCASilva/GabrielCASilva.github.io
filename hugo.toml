@@ -25,3 +25,7 @@ pagination.pagerSize = 6
     name = 'About'
     pageRef = '/about'
     weight = 2
+
+[build]
+  [build.buildStats]
+    enable = true
