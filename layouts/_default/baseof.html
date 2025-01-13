@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang={{or .Params.lang .Site.Params.lang }}>
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body>
+  <body class="container three-columns">
     <aside>
       {{ partial "sidebar.html" . }}
     </aside>
@@ -11,7 +11,7 @@
       {{ block "main" . }} {{ end }}
     </main>
     <aside>
-      <h1>barra da esquerda</h1>
+      <h1>barra da direita</h1>
     </aside>
   </body>
 </html>

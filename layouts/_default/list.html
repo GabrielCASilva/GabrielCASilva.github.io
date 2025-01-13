@@ -1,6 +1,5 @@
 {{ define "main" }}
-  <h1>List Main</h1>
   {{ range where .Paginator.Pages "Section" "posts" }}
-    <h1>{{ .Title }}</h1>
+    {{ partial "postCard.html" . }}
   {{ end }}
 {{ end }}

@@ -1,9 +1,10 @@
 baseURL = 'https://gabrielcasilva.github.io'
 languageCode = 'pt-br'
 title = 'gabrielcasilva'
-paginate = 6
+pagination.pagerSize = 6
 
 [params]
+  lang = 'pt-br'
   description = 'blog pessoal sobre estudo de computação de tecnologias'
 
 [taxiomies]
@@ -15,7 +16,10 @@ paginate = 6
     identifier = 'home'
     name = 'Home'
     pageRef = '/'
+    weight = 1
   [[menus.main]]
     identifier = 'about'
     name = 'About'
     pageRef = '/about'
+    weight = 2
+

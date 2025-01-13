@@ -1,4 +1,19 @@
-{{ range .Site.Menus.main }}
-  <h1>{{ .Name }}</h1>
-{{ end }}
-
+<div class="avatar">
+  <img src="https://elouwerse.nl/placecircle/150" />
+</div>
+<div class="sidebar-container">
+  <h3>Gabriel Carvalho</h3>
+  <nav>
+    <ul>
+      {{ range .Site.Menus.main }}    
+        {{ $identifier := .Identifier | default "home" }}
+        {{ $path := printf "icons/%s.svg" $identifier }}
+        {{ $image := resources.Get $path }}
+        <li>
+          <img src="{{ $image.RelPermalink }}" alt="{{ $identifier }} icon" class="icon" />
+          <a href="{{ .PageRef }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>
