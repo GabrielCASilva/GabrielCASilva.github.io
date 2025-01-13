@@ -1,3 +1,12 @@
+.avatar {
+  width: 150px;
+}
+
+.sidebar-social {
+  display: flex;
+  gap: var(--page-columns-small-gap);
+}
+
 .sidebar-container {
   display: flex;
   flex-direction: column;
@@ -9,8 +18,9 @@
   padding: 1.2rem 0;
 }
 
-.sidebar-container li {
+.sidebar-container li > a{
   display: flex;
+  align-items: center;
   gap: 1.8rem;
   padding-bottom: 1.8rem;
 }

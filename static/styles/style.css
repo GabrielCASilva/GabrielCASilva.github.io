@@ -34,6 +34,12 @@ a {
     color: var(--text);
 }
 
+/* FONT WEIGHTS */
+
+.text-bold-5 {
+    font-weight: 500;
+}
+
 .container {
     max-width: 1366px;
     width: 100%;
@@ -54,9 +60,20 @@ a {
     grid-template-columns: 15% 1fr;
 }
 
+/* ICONS */
+
 .icon {
+    line-height: 1;
     width: 1.6rem;
 }
+
+.icon-text {
+    line-height: 1;
+    position: relative;
+    top: .05em;
+}
+
+/* BREAK POINTS */
 
 @media (max-width: 1536px) {
   .container {

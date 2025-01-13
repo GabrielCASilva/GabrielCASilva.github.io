@@ -6,6 +6,9 @@ pagination.pagerSize = 6
 [params]
   lang = 'pt-br'
   description = 'blog pessoal sobre estudo de computação de tecnologias'
+  [params.paths]
+    github = 'https://github.com/GabrielCASilva'
+    linkedin = 'https://www.linkedin.com/in/gabrielcarvalho01/'
 
 [taxiomies]
   category = 'categories'
@@ -22,4 +25,3 @@ pagination.pagerSize = 6
     name = 'About'
     pageRef = '/about'
     weight = 2
-
