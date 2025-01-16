@@ -4,6 +4,7 @@ title = 'gabrielcasilva'
 pagination.pagerSize = 6
 
 [params]
+  fingerprint = true
   lang = 'pt-br'
   description = 'blog pessoal sobre estudo de computação de tecnologias'
   [params.paths]
