@@ -29,3 +29,40 @@ pagination.pagerSize = 6
 [build]
   [build.buildStats]
     enable = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = """
+      connect-src 'self' localhost:1313; 
+      font-src 'self' localhost:1313; 
+      img-src 'self' localhost:1313; 
+      script-src-elem 'nonce-randomString' 'self' localhost:1313; 
+      style-src-attr 'nonce-randomString' 'self' localhost:1313; 
+      style-src-elem 'self'; 
+    """    
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=2592000"
+    Permissions-Policy = """
+      vibrate=(), 
+      geolocation=(), 
+      midi=(), 
+      notifications=(), 
+      push=(), 
+      sync-xhr=(), 
+      microphone=(), 
+      camera=(), 
+      magnetometer=(), 
+      gyroscope=(), 
+      speaker=(), 
+      vibrate=(), 
+      fullscreen=(), 
+      payment=()
+    """
+
+
+
+
