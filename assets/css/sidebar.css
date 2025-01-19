@@ -2,6 +2,10 @@
   width: 150px;
 }
 
+.avatar img {
+  border-radius: 50%;
+}
+
 .sidebar-social {
   display: flex;
   gap: var(--page-columns-small-gap);
