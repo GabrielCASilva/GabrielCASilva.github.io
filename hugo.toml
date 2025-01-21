@@ -24,7 +24,7 @@ pagination.pagerSize = 6
   [[menus.main]]
     identifier = 'about'
     name = 'About'
-    pageRef = '/about'
+    pageRef = '/about/'
     weight = 2
 
 [build]

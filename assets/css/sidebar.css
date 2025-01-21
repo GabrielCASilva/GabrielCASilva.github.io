@@ -28,3 +28,8 @@
   gap: 1.8rem;
   padding-bottom: 1.8rem;
 }
+
+/* TODO: configurar o menu que foi selecionado na barra lateral*/
+.sidebar-container .selected {
+  background-color: #fff;
+}

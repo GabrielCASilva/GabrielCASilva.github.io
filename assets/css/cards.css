@@ -1,14 +1,11 @@
-.card {
+.list-card {
   position: relative;
   border-radius: 1.2rem;
   padding: 2.2rem;
   background-color: var(--bg-card);
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
 }
 
-.card .link {
+.list-card a {
   position:absolute;
   top:0;
   left: 0;
@@ -16,25 +13,26 @@
   bottom: 0;
 }
 
-.card footer {
+.list-card header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.card footer > div {
+
+.list-card main,
+.list-card time{
+  color: var(--text-secondary);
+}
+
+.list-card footer {
+  padding-top: 2.4rem;
   display: flex;
+  flex-direction: column;
   gap: 1.2rem;
 }
 
-/* colocar isso no arquivo style */
-.card .category, .card .tag {
-  padding: .4rem 1.2rem;
-  border-radius: .6rem;
-}
-
-.card .category {
-  background-color: #ffe3a1;
-}
-.card .tag {
-background-color: #abffff;
+.list-card .tag-row {
+  display: flex;
+  gap: 1.2rem;
 }

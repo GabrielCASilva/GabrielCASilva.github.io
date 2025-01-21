@@ -15,12 +15,13 @@
   </div>
   <nav>
     <ul>
+      {{- $url := .Page.RelPermalink -}}
       {{- range .Site.Menus.main -}}
       {{- $identifier := .Identifier | default "home" -}}
       {{- $path := printf "icons/%s.svg" $identifier -}}
       {{- $image := resources.Get $path -}}
       <li>
-        <a href="{{ .PageRef }}">
+        <a href="{{ .PageRef }}" class="{{ if eq $url .PageRef }}selected{{ end }}">
           <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="{{ $identifier }} icon" class="icon" />
           <span class="icon-text text-bold-5">{{ .Name }}</span>
         </a>
