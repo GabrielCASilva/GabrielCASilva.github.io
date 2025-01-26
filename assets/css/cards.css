@@ -19,7 +19,6 @@
   align-items: center;
 }
 
-
 .list-card main,
 .list-card time{
   color: var(--text-secondary);

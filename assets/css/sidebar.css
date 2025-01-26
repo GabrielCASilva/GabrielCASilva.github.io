@@ -22,11 +22,18 @@
   padding: 1.2rem 0;
 }
 
+.sidebar-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
 .sidebar-container li > a{
   display: flex;
   align-items: center;
   gap: 1.8rem;
-  padding-bottom: 1.8rem;
+  padding: .8rem 1rem;
+  border-radius: .6rem;
 }
 
 /* TODO: configurar o menu que foi selecionado na barra lateral*/

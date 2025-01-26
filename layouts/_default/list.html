@@ -2,7 +2,7 @@
 {{- range where .Paginator.Pages "Section" "posts" -}}
 <article class="list-card">
   <header>
-    <h2>{{ .Title }}</h2>
+    <h2 class="fw-6 fs-24">{{ .Title }}</h2>
     <time>{{ .Date.Format "02/01/2006" }}</time>
   </header>
   <main>
