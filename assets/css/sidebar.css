@@ -1,3 +1,4 @@
+
 .avatar {
   width: 150px;
 }
@@ -36,7 +37,6 @@
   border-radius: .6rem;
 }
 
-/* TODO: configurar o menu que foi selecionado na barra lateral*/
 .sidebar-container .selected {
   background-color: #fff;
 }

@@ -1,3 +1,9 @@
+.list-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
 .list-card {
   position: relative;
   border-radius: 1.2rem;

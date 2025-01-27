@@ -6,7 +6,7 @@
   --bg-category: #ffe3a1;
   --bg-tag: #abffff;
 
-  --page-padding: 2.4rem 2.4rem 0;
+  --page-padding: 2.4rem 2.4rem;
   --page-small-padding: 1.2rem 1.2rem 0; 
   --page-columns-gap: 2.4rem;
   --page-columns-small-gap: 1.2rem;
@@ -25,6 +25,11 @@ body {
     font-size: 1.6rem;
     background-color: var(--bg-color);
     font-family: "Inter", sans-serif;
+}
+
+aside > div {
+  position: sticky;
+  top: 2.4rem;
 }
 
 ul {

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang={{or .Params.lang .Site.Params.lang }}>
-  <head>
-    {{ partial "head.html" . }}
-  </head>
-  <body class="container three-columns">
-    <aside>
-      {{ partial "sidebar.html" . }}
-    </aside>
-    <main>
-      {{ block "main" . }} {{ end }}
-    </main>
-    <aside>
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="container three-columns">
+  <aside>
+    {{ partial "sidebar.html" . }}
+  </aside>
+  <main>
+    {{ block "main" . }} {{ end }}
+  </main>
+  <aside>
+    <div>
       <h1>barra da direita</h1>
-    </aside>
-  </body>
+    </div>
+  </aside>
+</body>
+
 </html>

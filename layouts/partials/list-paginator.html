@@ -1,0 +1,10 @@
+{{ $p := .pag }}
+<div>
+  {{- if $p.HasPrev -}}
+  <a class="next" href="{{ $p.Prev.URL }}">Prev</a>
+  {{- end -}}
+  <p>{{ $p.PageNumber }}</p>
+  {{- if $p.HasNext -}}
+  <a class="next" href="{{ $p.Next.URL }}">Next</a>
+  {{- end -}}
+</div>

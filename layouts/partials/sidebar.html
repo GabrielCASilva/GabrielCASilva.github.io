@@ -1,32 +1,34 @@
-<div class="avatar">
-  <img width="150" height="150" src="/images/avatar.png" alt="avatar" />
-</div>
-<div class="sidebar-container">
-  <h3 class="fw-6">Gabriel Carvalho</h3>
-  <div class="sidebar-social">
-    {{- $image := resources.Get "icons/github.svg" -}}
-    <a href="{{ .Site.Params.paths.github }}">
-      <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="github icon" class="icon">
-    </a>
-    {{- $image := resources.Get "icons/linkedin.svg" -}}
-    <a href="{{ .Site.Params.paths.linkedin }}">
-      <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="linkedin icon" class="icon">
-    </a>
+<div>
+  <div class="avatar">
+    <img width="150" height="150" src="/images/avatar.png" alt="avatar" />
   </div>
-  <nav>
-    <ul>
-      {{- $url := .Page.RelPermalink -}}
-      {{- range .Site.Menus.main -}}
-      {{- $identifier := .Identifier | default "home" -}}
-      {{- $path := printf "icons/%s.svg" $identifier -}}
-      {{- $image := resources.Get $path -}}
-      <li>
-        <a href="{{ .PageRef }}" class="{{ if eq $url .PageRef }}selected{{ end }}">
-          <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="{{ $identifier }} icon" class="icon" />
-          <span class="icon-text text-bold-5">{{ .Name }}</span>
-        </a>
-      </li>
-      {{- end -}}
-    </ul>
-  </nav>
+  <div class="sidebar-container">
+    <h3 class="fw-6">Gabriel Carvalho</h3>
+    <div class="sidebar-social">
+      {{- $image := resources.Get "icons/github.svg" -}}
+      <a href="{{ .Site.Params.paths.github }}">
+        <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="github icon" class="icon">
+      </a>
+      {{- $image := resources.Get "icons/linkedin.svg" -}}
+      <a href="{{ .Site.Params.paths.linkedin }}">
+        <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="linkedin icon" class="icon">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        {{- $url := .Page.RelPermalink -}}
+        {{- range .Site.Menus.main -}}
+        {{- $identifier := .Identifier | default "home" -}}
+        {{- $path := printf "icons/%s.svg" $identifier -}}
+        {{- $image := resources.Get $path -}}
+        <li>
+          <a href="{{ .PageRef }}" class="{{ if eq $url .PageRef }}selected{{ end }}">
+            <img width="16" height="16" src="{{ $image.RelPermalink }}" alt="{{ $identifier }} icon" class="icon" />
+            <span class="icon-text text-bold-5">{{ .Name }}</span>
+          </a>
+        </li>
+        {{- end -}}
+      </ul>
+    </nav>
+  </div>
 </div>
