@@ -7,4 +7,6 @@ categories = ['category 1', 'category 2']
 tags = ['tag 1', 'tag 2']
 +++
 
-## Primeiro post do blog
+## Conteudo do blog
+
+exemplo do texto do conteúdo

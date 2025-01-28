@@ -1,3 +1,17 @@
-{{- define "main" -}}
-<h1>{{ .Title }}</h1>
-{{- end -}}
+<!DOCTYPE html>
+<html lang={{or .Params.lang .Site.Params.lang }}>
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="container two-columns">
+  <aside>
+    {{ partial "sidebar.html" . }}
+  </aside>
+  <main>
+    {{ partial "post-data" . }}
+  </main>
+</body>
+
+</html>
